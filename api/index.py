@@ -1,3 +1,12 @@
+def install_package(package_name, install_command):
+    try:
+        importlib.import_module(package_name)
+        print(f"{package_name} is already installed.")
+    except ImportError:
+        pip.main(['install', install_command])
+        print(f"{package_name} has been installed successfully.")
+install_package("requests", "requests")
+install_package("flask", "flask")
 from flask import Flask,request,redirect,Response
 import requests
 app = Flask(__name__)
