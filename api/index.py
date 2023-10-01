@@ -1,3 +1,6 @@
+import importlib
+import pip
+
 def install_package(package_name, install_command):
     try:
         importlib.import_module(package_name)
